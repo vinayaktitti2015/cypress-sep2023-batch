@@ -1,0 +1,12 @@
+// cypress version 13.01
+// qa team using same version
+
+/**
+cypress 
+  e2e - to create the spec files
+  fixtures - to create the test data files
+  support - to create the support files, import packages and reusable functions
+  node_modules - to store bin and library files
+  cypress.config.js - to configure the global configuration
+  package.json - for the dependencies manager and to create npm scripts for cmmd line execution
+  package-lock.json - for the dependencies manager and to lock the package versions
