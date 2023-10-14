@@ -1,6 +1,6 @@
 // these are the reusable components used for any project functions
 /**
- * 
+ *
  * @returns cypress.
  * playwright
  * puppeteer
@@ -8,15 +8,38 @@
  * webdriverio
  */
 
+// date functions
 export const getTodayDate = () => {
   var today = new Date();
   var dd = today.getDate();
 
-//   if (dd < 10) {
-//     dd = "0" + dd;
-//   }
+  //   if (dd < 10) {
+  //     dd = "0" + dd;
+  //   }
 
   return dd;
+};
+
+export const getMonth = () => {
+  var today = new Date();
+  var month = today.getMonth();
+
+  //   if (dd < 10) {
+  //     dd = "0" + dd;
+  //   }
+
+  return month;
+};
+
+export const getThisYear = () => {
+  var today = new Date();
+  var year = today.getFullYear();
+
+  //   if (dd < 10) {
+  //     dd = "0" + dd;
+  //   }
+
+  return year;
 };
 
 export const getFutureDate = (val) => {
@@ -30,30 +53,4 @@ export const getFutureDate = (val) => {
 
 export const randomNumber = (numbers) => {
   return Math.floor(Math.random() * numbers);
-};
-
-export const selectRandomDropdownValue = (ddElement, ddOptions) => {
-  cy.get(ddOptions)
-    .its("length")
-    .then(($len) => {
-      const lenValue = $len;
-      const list = randomNumber(lenValue);
-
-      cy.get(ddOptions)
-        .eq(list)
-        .then((ele) => {
-          cy.get(ddElement).select(ele.val()).should("have.value", ele.val());
-        });
-    });
-};
-
-export const selectRandomCheckbox = (element) => {
-  cy.get(element)
-    .its("length")
-    .then(($len) => {
-      const lenValue = $len;
-      const list = randomNumber(lenValue);
-
-      cy.get(element).eq(list).should("not.be.checked").check();
-    });
 };

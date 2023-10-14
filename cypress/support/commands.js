@@ -25,6 +25,15 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 // these are the cypress custom commands - u can use it for this project only
+
+import { randomNumber } from "../util/helper";
+
+// reusable commands
+// can apply or reuse in the other cypress projects
+Cypress.Commands.add("openBrowser", () => {
+  cy.visit(Cypress.env("prod") + "/");
+});
+
 Cypress.Commands.add("switchToIframe", (iframe) => {
   return (
     cy
@@ -40,4 +49,34 @@ Cypress.Commands.add("switchToIframe", (iframe) => {
 
 Cypress.Commands.add("parseXlsx", (url) => {
   return cy.task("parseXlsx", { url: url });
+});
+
+Cypress.Commands.add("verifyMessage", (args) => {
+  cy.contains(args).should("be.visible");
+});
+
+Cypress.Commands.add("selectRandomDropdownValue", (ddElement, ddOptions) => {
+  cy.get(ddOptions)
+    .its("length")
+    .then(($len) => {
+      const lenValue = $len;
+      const list = randomNumber(lenValue);
+
+      cy.get(ddOptions) // parent element
+        .eq(list)
+        .then((ele) => {
+          cy.get(ddElement).select(ele.val()).should("have.value", ele.val());
+        });
+    });
+});
+
+Cypress.Commands.add("selectRandomCheckbox", (element) => {
+  cy.get(element)
+    .its("length")
+    .then(($len) => {
+      const lenValue = $len;
+      const list = randomNumber(lenValue);
+
+      cy.get(element).eq(list).should("not.be.checked").check();
+    });
 });

@@ -10,3 +10,5 @@ cypress
   cypress.config.js - to configure the global configuration
   package.json - for the dependencies manager and to create npm scripts for cmmd line execution
   package-lock.json - for the dependencies manager and to lock the package versions
+
+  

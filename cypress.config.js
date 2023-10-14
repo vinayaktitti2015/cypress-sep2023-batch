@@ -37,7 +37,7 @@ module.exports = defineConfig({
     },
     //specPattern: "cypress/specs/**/*.spec.js",
     //excludeSpecPattern: "cypress/e2e/2-advanced-examples/location.cy.js",
-    //baseUrl: "https://testautomationpractice.blogspot.com",
+    //baseUrl: "https://demo.nopcommerce.com/",
     experimentalRunAllSpecs: true,
     defaultCommandTimeout: 6000,
     pageLoadTimeout: 20000,
