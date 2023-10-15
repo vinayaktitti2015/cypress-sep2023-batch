@@ -1,0 +1,73 @@
+{
+  "body": {
+    "id": 101,
+    "title": "BMW Pencil"
+  },
+  "headers": {
+    "access-control-allow-origin": "*",
+    "x-dns-prefetch-control": "off",
+    "x-frame-options": "SAMEORIGIN",
+    "strict-transport-security": "max-age=15552000; includeSubDomains",
+    "x-download-options": "noopen",
+    "x-content-type-options": "nosniff",
+    "x-xss-protection": "1; mode=block",
+    "x-ratelimit-limit": "120",
+    "x-ratelimit-remaining": "118",
+    "date": "Sat, 14 Oct 2023 09:18:03 GMT",
+    "x-ratelimit-reset": "1697275135",
+    "content-type": "application/json; charset=utf-8",
+    "content-length": "31",
+    "etag": "W/\"1f-WegpuO02IB3N0V1mjB/0vMANoOo\"",
+    "vary": "Accept-Encoding",
+    "server": "railway"
+  },
+  "status": 200,
+  "statusText": "OK",
+  "isOkStatusCode": true,
+  "requestHeaders": {
+    "Connection": "keep-alive",
+    "Content-Type": "application/json",
+    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsInVzZXJuYW1lIjoia21pbmNoZWxsZSIsImVtYWlsIjoia21pbmNoZWxsZUBxcS5jb20iLCJmaXJzdE5hbWUiOiJKZWFubmUiLCJsYXN0TmFtZSI6IkhhbHZvcnNvbiIsImdlbmRlciI6ImZlbWFsZSIsImltYWdlIjoiaHR0cHM6Ly9yb2JvaGFzaC5vcmcvYXV0cXVpYXV0LnBuZyIsImlhdCI6MTY5NzI3NTAzOSwiZXhwIjoxNjk3Mjc4NjM5fQ.SCgBdKvn5smz2O04UXeZn_BFXLnkuWe0-WUwat-YDqc",
+    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/13.3.1 Chrome/114.0.5735.289 Electron/25.8.4 Safari/537.36",
+    "accept": "*/*",
+    "accept-encoding": "gzip, deflate",
+    "content-length": 22
+  },
+  "requestBody": "{\"title\":\"BMW Pencil\"}",
+  "duration": 165,
+  "allRequestResponses": [
+    {
+      "Request Body": "{\"title\":\"BMW Pencil\"}",
+      "Request Headers": {
+        "Connection": "keep-alive",
+        "Content-Type": "application/json",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsInVzZXJuYW1lIjoia21pbmNoZWxsZSIsImVtYWlsIjoia21pbmNoZWxsZUBxcS5jb20iLCJmaXJzdE5hbWUiOiJKZWFubmUiLCJsYXN0TmFtZSI6IkhhbHZvcnNvbiIsImdlbmRlciI6ImZlbWFsZSIsImltYWdlIjoiaHR0cHM6Ly9yb2JvaGFzaC5vcmcvYXV0cXVpYXV0LnBuZyIsImlhdCI6MTY5NzI3NTAzOSwiZXhwIjoxNjk3Mjc4NjM5fQ.SCgBdKvn5smz2O04UXeZn_BFXLnkuWe0-WUwat-YDqc",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/13.3.1 Chrome/114.0.5735.289 Electron/25.8.4 Safari/537.36",
+        "accept": "*/*",
+        "accept-encoding": "gzip, deflate",
+        "content-length": 22
+      },
+      "Request URL": "https://dummyjson.com/products/add",
+      "Response Body": "{\"id\":101,\"title\":\"BMW Pencil\"}",
+      "Response Headers": {
+        "access-control-allow-origin": "*",
+        "x-dns-prefetch-control": "off",
+        "x-frame-options": "SAMEORIGIN",
+        "strict-transport-security": "max-age=15552000; includeSubDomains",
+        "x-download-options": "noopen",
+        "x-content-type-options": "nosniff",
+        "x-xss-protection": "1; mode=block",
+        "x-ratelimit-limit": "120",
+        "x-ratelimit-remaining": "118",
+        "date": "Sat, 14 Oct 2023 09:18:03 GMT",
+        "x-ratelimit-reset": "1697275135",
+        "content-type": "application/json; charset=utf-8",
+        "content-length": "31",
+        "etag": "W/\"1f-WegpuO02IB3N0V1mjB/0vMANoOo\"",
+        "vary": "Accept-Encoding",
+        "server": "railway"
+      },
+      "Response Status": 200
+    }
+  ]
+}

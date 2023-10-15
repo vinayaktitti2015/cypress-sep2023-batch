@@ -15,9 +15,11 @@
 
 // Import commands.js using ES2015 syntax:
 import "./commands";
+import "./e2eflow";
+
 import "cypress-iframe";
-require('cypress-downloadfile/lib/downloadFileCommand')
-require('cy-verify-downloads').addCustomCommand();
+require("cypress-downloadfile/lib/downloadFileCommand");
+require("cy-verify-downloads").addCustomCommand();
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 

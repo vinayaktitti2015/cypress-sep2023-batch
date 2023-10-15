@@ -6,7 +6,8 @@
   "scripts": {
     "test-chrome": "cypress run -b chrome --headed --spec './cypress/e2e/specs/*.spec.cy.js'",
     "test-firefox": "cypress run -b firefox --headed --spec './cypress/e2e/specs/register.spec.cy.js'",
-    "test-electron": "cypress run -b electron --headless --spec './cypress/e2e/specs/register.spec.cy.js'"
+    "test-electron": "cypress run -b electron --headless --spec './cypress/e2e/specs/register.spec.cy.js'",
+    "test-api": "cypress run --spec './cypress/e2e/specs/*.spec.cy.js'"
   },
   "keywords": [
     "cypress",
