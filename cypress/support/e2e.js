@@ -14,38 +14,49 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import "./commands";
-import "./e2eflow";
+import './commands'
+import './admin'
+import './myinfo'
 
-import "cypress-iframe";
-require("cypress-downloadfile/lib/downloadFileCommand");
-require("cy-verify-downloads").addCustomCommand();
+// 3rd party plugin imports
+import 'cypress-iframe'
+import 'cypress-file-upload'
+import 'cypress-xpath'
+import 'cypress-mochawesome-reporter/register';
+
+
+require('cypress-downloadfile/lib/downloadFileCommand')
+require('cy-verify-downloads').addCustomCommand()
+require('@4tw/cypress-drag-drop')
+
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
-/**
- * import packages
- * global hooks or annotations
- */
+Cypress.on('uncaught:exception', err => {
+  return false
+})
 
-export const setupHooks = () => {
-  before(() => {
-    cy.log("global pre-hooks");
-  });
+const sizes = ['iphone-xr', 'samsung-note9', 'macbook-16', 'ipad-mini']
 
-  beforeEach(() => {
-    cy.log("global beforeEach hooks");
-  });
+beforeEach(() => {
+  // const role = Cypress.env('role')
 
-  afterEach(() => {
-    cy.log("global afterEach hooks");
-  });
+  // if (role == 'admin') {
+  //   cy.adminLogin('adminLogin')
+  // } else if (role == 'user') {
+  //   cy.userLogin('adminLogin')
+  // }
 
-  after(() => {
-    cy.log("global post-hooks");
-  });
-};
+  // sizes.forEach(size => {
+  //   cy.viewport(size)
+  // })
+})
 
-Cypress.on("uncaught:exception", (err) => {
-  return false;
-});
+// afterEach(() => {
+//   cy.clearAllCookies()
+//   cy.reload(true)
+// })
+
+// beforeEach(() => {
+//   cy.userLogin('adminLogin')
+// })

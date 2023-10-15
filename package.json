@@ -1,30 +1,62 @@
 {
-  "name": "cypress-sep-2023-batch",
+  "name": "cypress-deltacubes",
   "version": "1.0.0",
-  "description": "cypress e2e tests",
+  "description": "cypress tests",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
-    "test-chrome": "cypress run -b chrome --headed --spec './cypress/e2e/specs/*.spec.cy.js'",
-    "test-firefox": "cypress run -b firefox --headed --spec './cypress/e2e/specs/register.spec.cy.js'",
-    "test-electron": "cypress run -b electron --headless --spec './cypress/e2e/specs/register.spec.cy.js'",
-    "test-api": "cypress run --spec './cypress/e2e/specs/*.spec.cy.js'"
+    "test": "cypress run",
+    "test:chrome": "cypress run -b chrome --headed -s 'cypress/e2e/day4-specs/features/Login.feature'",
+    "test:chrome-headless": "cypress run -b chrome --headless -s 'cypress/e2e/day4-specs/features/Login.feature'",
+    "test:firefox": "cypress run --record --key fffd4c32-7f38-4ef6-a182-f5ce7636d803 -b firefox --headed -s 'cypress/e2e/day2-specs/**.spec.cy.js'",
+    "test:ci:record": "cypress run --record --key fffd4c32-7f38-4ef6-a182-f5ce7636d803 -b chrome --headless -s 'cypress/e2e/day2-specs/*.cy.js'",
+    "test:electron": "cypress run -b electron --headed  -s 'cypress/e2e/day3-specs/**/*.spec.cy.js'",
+    "test:electron-headless": "cypress run -r mocha-allure-reporter -b electron --headless -s 'cypress/e2e/day3-specs/**/*.spec.cy.js'",
+    "cy:parallel": "cypress-parallel -s cypress run -t 6 -d 'cypress/e2e/day3-specs/uitests' -a '--config baseUrl=http://localhost:3000'",
+    "report": "allure generate allure-results --clean -o allure-report && allure open allure-report",
+    "generatereports": "node ./index.js"
   },
   "keywords": [
-    "cypress",
-    "javascript"
+    "cypress"
   ],
-  "author": "vinayak",
+  "author": "sathish",
   "license": "ISC",
   "devDependencies": {
-    "@faker-js/faker": "^8.0.2",
-    "cy-verify-downloads": "^0.2.0",
-    "cypress": "^13.1.0",
+    "@4tw/cypress-drag-drop": "^2.2.3",
+    "chalk": "^5.2.0",
+    "cy-verify-downloads": "^0.1.11",
+    "cypress": "^12.8.1",
+    "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-downloadfile": "^1.2.3",
+    "cypress-file-upload": "^5.0.8",
     "cypress-iframe": "^1.0.1",
-    "node-xlsx": "^0.23.0",
+    "cypress-mochawesome-reporter": "^3.2.3",
+    "cypress-multi-reporters": "^1.6.2",
+    "cypress-xpath": "^2.0.1",
+    "excel": "^1.0.1",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^11.1.0",
+    "mocha-allure-reporter": "^1.4.0",
+    "moment": "^2.29.4",
+    "moment-timezone": "^0.5.40",
+    "multiple-cucumber-html-reporter": "^3.0.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "node-xlsx": "^0.21.0",
+    "path": "^0.12.7",
     "request": "^2.88.2"
   },
   "dependencies": {
     "react": "^18.2.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "cypress/support/stepDefs/",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "./cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
   }
 }

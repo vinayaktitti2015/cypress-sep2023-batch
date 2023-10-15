@@ -1,0 +1,421 @@
+[
+  {
+    "description": "    As a user I want to login to app",
+    "keyword": "Feature",
+    "name": "Login feature",
+    "line": 1,
+    "id": "login-feature",
+    "tags": [],
+    "uri": "Login.feature",
+    "elements": [
+      {
+        "id": "login-feature;check-valid-login",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "check valid login",
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 8
+          },
+          {
+            "name": "@qa",
+            "line": 8
+          },
+          {
+            "name": "@staging",
+            "line": 8
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I open the url",
+            "result": {
+              "status": "passed",
+              "duration": 1504000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I enter username",
+            "result": {
+              "status": "passed",
+              "duration": 645000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I enter password",
+            "result": {
+              "status": "passed",
+              "duration": 387000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I click login",
+            "result": {
+              "status": "passed",
+              "duration": 1064000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I should see dashboard",
+            "result": {
+              "status": "passed",
+              "duration": 267000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I capture screenshot",
+            "result": {
+              "status": "passed",
+              "duration": 2853000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "login-feature;check-login-with-data-args",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "check login with data args",
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 16
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I open the url",
+            "result": {
+              "status": "passed",
+              "duration": 577000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "I type username as \"Admin\"",
+            "result": {
+              "status": "passed",
+              "duration": 625000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "I type password as \"admin123\"",
+            "result": {
+              "status": "passed",
+              "duration": 344000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "I click login",
+            "result": {
+              "status": "passed",
+              "duration": 984000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "I should see \"Dashboard\"",
+            "result": {
+              "status": "passed",
+              "duration": 273000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "login-feature;check-login-with-diff-sets-of-data",
+        "keyword": "Scenario",
+        "line": 32,
+        "name": "check login with diff sets of data",
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 23
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I open the url",
+            "result": {
+              "status": "passed",
+              "duration": 450000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I type username as \"Admin\"",
+            "result": {
+              "status": "passed",
+              "duration": 664000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I type password as \"admin123\"",
+            "result": {
+              "status": "passed",
+              "duration": 388000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I click login",
+            "result": {
+              "status": "passed",
+              "duration": 934000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "I should see textlabel \"Dashboard\"",
+            "result": {
+              "status": "passed",
+              "duration": 226000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "login-feature;check-login-with-diff-sets-of-data",
+        "keyword": "Scenario",
+        "line": 33,
+        "name": "check login with diff sets of data",
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 23
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I open the url",
+            "result": {
+              "status": "passed",
+              "duration": 466000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I type username as \"Admin\"",
+            "result": {
+              "status": "passed",
+              "duration": 676000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I type password as \"admin124\"",
+            "result": {
+              "status": "passed",
+              "duration": 357000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I click login",
+            "result": {
+              "status": "passed",
+              "duration": 958000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "I should see textlabel \"Invalid credentials\"",
+            "result": {
+              "status": "passed",
+              "duration": 284000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "login-feature;check-login-with-diff-sets-of-data",
+        "keyword": "Scenario",
+        "line": 34,
+        "name": "check login with diff sets of data",
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 23
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I open the url",
+            "result": {
+              "status": "passed",
+              "duration": 600000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I type username as \"Admin123\"",
+            "result": {
+              "status": "passed",
+              "duration": 713000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I type password as \"admin123\"",
+            "result": {
+              "status": "passed",
+              "duration": 402000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I click login",
+            "result": {
+              "status": "passed",
+              "duration": 610000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "I should see textlabel \"Invalid credentials\"",
+            "result": {
+              "status": "passed",
+              "duration": 235000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "login-feature;check-login-with-diff-sets-of-data",
+        "keyword": "Scenario",
+        "line": 35,
+        "name": "check login with diff sets of data",
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 23
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I open the url",
+            "result": {
+              "status": "passed",
+              "duration": 365000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I type username as \"Admin\"",
+            "result": {
+              "status": "passed",
+              "duration": 654000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I type password as \"12233\"",
+            "result": {
+              "status": "passed",
+              "duration": 370000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I click login",
+            "result": {
+              "status": "passed",
+              "duration": 909000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "I should see textlabel \"Invalid credentials\"",
+            "result": {
+              "status": "passed",
+              "duration": 227000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
