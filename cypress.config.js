@@ -46,5 +46,6 @@ module.exports = defineConfig({
     watchForFileChanges: true,
     chromeWebSecurity: false,
     downloadsFolder: "cypress/downloads",
+    projectId: "97xxnk",
   },
 });

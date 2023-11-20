@@ -1,7 +1,7 @@
 describe("tabs handling", () => {
   it("remove the target attr", () => {
     cy.visit("https://phptravels.com/demo");
-    cy.viewport("macbook-16");
+    //cy.viewport("macbook-16");
     cy.contains("Login")
       .first()
       .invoke("removeAttr", "target")
@@ -20,7 +20,7 @@ describe("tabs handling", () => {
   it("test tabs using href attr", () => {
     //cy.get("#ACCOUNT").trigger("mouseover").trigger("click").wait(2000);
     cy.visit("https://phptravels.com/demo");
-    cy.viewport("macbook-16");
+    //cy.viewport("macbook-16");
     cy.contains("Login")
       .first()
       .then(($el) => {

@@ -4,7 +4,10 @@
   "description": "cypress e2e tests",
   "main": "index.js",
   "scripts": {
-    "test": "cypress run"
+    "test-chrome": "cypress run --record --key aa7135f3-d439-4053-9775-242762a54e94 -b chrome --headed -s 'cypress/e2e/week-2/*.cy.js'",
+    "test-chrome-headless": "cypress run --record --key aa7135f3-d439-4053-9775-242762a54e94 -b chrome --headless -s 'cypress/e2e/week-2/*.cy.js'",
+    "test-firefox": "cypress run --record --key aa7135f3-d439-4053-9775-242762a54e94 -b firefox --headed -s 'cypress/e2e/week-1/*.cy.js'",
+    "test-msedge": "cypress run --record --key aa7135f3-d439-4053-9775-242762a54e94 -b edge --headed -s 'cypress/e2e/week-2/*.cy.js'"
   },
   "keywords": [
     "cypress",
